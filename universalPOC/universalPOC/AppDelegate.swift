@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-//        let flowLayout = UICollectionViewFlowLayout()
-//        let customCollectionViewController = CustomCollectionViewController(collectionViewLayout: flowLayout)
+        let flowLayout = UICollectionViewFlowLayout()
+        let customCollectionViewController = CustomCollectionViewController(collectionViewLayout: flowLayout)
 
-      window?.rootViewController = UINavigationController(rootViewController: CustomCollectionViewController())
+      window?.rootViewController = UINavigationController(rootViewController:customCollectionViewController)
         
         return true
     }

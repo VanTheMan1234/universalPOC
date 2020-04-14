@@ -59,10 +59,10 @@
 				619452F7243D292C00C943F7 /* AppDelegate.swift */,
 				619452FB243D292C00C943F7 /* ViewController.swift */,
 				6191F05724451F90008DBC7B /* CollectionViewCell.swift */,
+				6191F0592445251A008DBC7B /* CollectionViewDataSource.swift */,
 				61945300243D292F00C943F7 /* Assets.xcassets */,
 				61945302243D292F00C943F7 /* LaunchScreen.storyboard */,
 				61945305243D292F00C943F7 /* Info.plist */,
-				6191F0592445251A008DBC7B /* CollectionViewDataSource.swift */,
 			);
 			path = universalPOC;
 			sourceTree = "<group>";

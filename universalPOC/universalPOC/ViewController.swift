@@ -8,29 +8,13 @@
 
 import UIKit
 
-class CustomCollectionViewController: UIViewController {
-    let names = ["van","the","man","the","man","the","man","the","man","the","man","the","man"]
-    
-    let collectionView:UICollectionView = {
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.isPagingEnabled = true
-        return cv
-        
-    }()
+class CustomCollectionViewController: UICollectionViewController {
+    let names = ["SpiderMan","Her","The Blind Side","Batman","Marriage Story","Avengers","The Lighthouse", "Parasite"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.customCellIdentifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        view.addSubview(collectionView)
-        // Do any additional setup after loading the view.
     }
 }
 

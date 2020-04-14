@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-extension CustomCollectionViewController:  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout{
             
-         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return names.count
         }
         
-         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.customCellIdentifier, for: indexPath) as! CollectionViewCell
             customCell.nameLabel.text = names[indexPath.item]
             return customCell
