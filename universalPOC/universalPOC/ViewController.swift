@@ -14,7 +14,19 @@ class CustomCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
+        collectionView.delegate = self
+        collectionView.frame = view.frame
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.customCellIdentifier)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        // Have the collection view re-layout its cells.
+        coordinator.animate(
+            alongsideTransition: { _ in self.collectionView.collectionViewLayout.invalidateLayout() },
+            completion: { _ in }
+        )
     }
 }
 
