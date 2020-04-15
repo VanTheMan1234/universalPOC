@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let flowLayout = UICollectionViewFlowLayout()
         let customCollectionViewController = CustomCollectionViewController(collectionViewLayout: flowLayout)
-        
-        window?.rootViewController = UINavigationController(rootViewController: customCollectionViewController)
+
+      window?.rootViewController = UINavigationController(rootViewController:customCollectionViewController)
         
         return true
     }

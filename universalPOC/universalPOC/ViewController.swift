@@ -9,50 +9,13 @@
 import UIKit
 
 class CustomCollectionViewController: UICollectionViewController {
+    let names = ["SpiderMan","Her","The Blind Side","Batman","Marriage Story","Avengers","The Lighthouse", "Parasite"]
     
-    let customCellIdentifier = "customCellIdentifier"
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .red
-        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: customCellIdentifier)
-        // Do any additional setup after loading the view.
+        collectionView.backgroundColor = .white
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.customCellIdentifier)
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath)
-        return customCell
-    }
-
-
 }
 
-class CustomCell: UICollectionViewCell {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUpView()
-    }
-    
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Custom Text"
-        return label
-    
-    }()
-    
-    func setUpView(){
-        addSubview(nameLabel)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: <#T##String#>, options: <#T##NSLayoutConstraint.FormatOptions#>, metrics: <#T##[String : Any]?#>, views: <#T##[String : Any]#>))
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-}
 
